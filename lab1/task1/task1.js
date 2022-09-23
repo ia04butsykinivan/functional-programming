@@ -1,10 +1,24 @@
-var func1 = (arg) => [arg];
+function func1(arg) {
+    return [arg]
+};
 
-var func2 = arg => !arg.length;
+function func2(arg) {
+    return !func4(arg);
+}
 
-var func3 = (arg1, arg2) => [...arg1, arg2];
+function func3(arg1, arg2) {
+    return [...arg1, arg2]
+};
 
-var func4 = (arg) => arg.length;
+function func4(arg) {
+    var length = 0;
+
+    while (arg[length] !== undefined) {
+        length++;
+    }
+
+    return length;
+};
 
 console.log(func1(1));
 console.log(func2([]));
